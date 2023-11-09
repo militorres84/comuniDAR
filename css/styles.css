@@ -13,7 +13,7 @@
 
  /* Estilo para la grilla */
  .logo{
-  width: 6rem;
+  width: 3.5rem;
 }
 
 
@@ -49,6 +49,7 @@
   border: 2px solid #ccc; /* Agregamos un borde a las imágenes */
   border-radius: 8px; /* Borde redondeado para las imágenes */
   align-items: center;
+  filter: grayscale(90%);
 }
 
 /* Estilo para los nombres */
@@ -62,7 +63,14 @@
 .carta p {
   color: #666;
   font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
 }
+
+/* Estilo para el form en Contacto */
+#contactForm {
+  font-family: "Open Sans", sans-serif;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
