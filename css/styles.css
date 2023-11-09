@@ -10,6 +10,67 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ /* Estilo para la grilla */
+ .logo{
+  width: 3.5rem;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las cartas */
+}
+
+/* Estilo para las cartas */
+.carta {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  transition: transform 0.2s; /* Transición para el efecto de zoom */
+  cursor: pointer;
+  overflow: hidden;
+  display: flex; /* Centra el contenido horizontal y verticalmente */
+  flex-direction: column; /* Apila el contenido verticalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.carta:hover {
+  transform: scale(1.05); /* Efecto de pequeño zoom al pasar el mouse */
+}
+
+/* Estilo para las imágenes */
+.carta img {
+  width: 50%; /* Tamaño de la imagen al 100% del contenedor */
+  height: auto;
+  border: 2px solid #ccc; /* Agregamos un borde a las imágenes */
+  border-radius: 8px; /* Borde redondeado para las imágenes */
+  align-items: center;
+  filter: grayscale(90%);
+}
+
+/* Estilo para los nombres */
+.carta h2 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Estilo para las presentaciones */
+.carta p {
+  color: #666;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Estilo para el form en Contacto */
+#contactForm {
+  font-family: "Open Sans", sans-serif;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
