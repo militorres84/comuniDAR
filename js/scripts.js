@@ -27,3 +27,43 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
+//! Consumir API para usuarios random
+let userCount = 8;
+
+function fetchRandomUsers() {
+    fetch(`https://randomuser.me/api/?results=${userCount}`)
+    .then(response => response.json())
+    .then(data => {
+        const users = data.results;
+        const userContainer = document.getElementById('user-container');
+        
+        users.forEach(user => {
+        const userName = `${user.name.first} ${user.name.last}`;
+        const userImage = user.picture.large;
+        const userCity = user.location.city;
+
+        const userCard = document.createElement('div');
+        userCard.classList.add('col-md-6', 'col-lg-3', 'user-card');
+        userCard.innerHTML = `
+        <div class="card rounded-2">
+            <img src="${userImage}" class="card-img-top" alt="${userName} Image">
+            <div class="card-body">
+                <h5 class="card-subtitle">${userName}</h5>
+                <p class="card-text small">Ciudad: ${userCity}</p>
+            </div>
+        </div>
+        `;
+
+        userContainer.appendChild(userCard);
+        });
+    })
+    .catch(error => console.error('Error al obtener usuarios:', error));
+}
+
+function fetchMoreUsers() {
+    userCount += 4;
+    fetchRandomUsers();
+}
+
+// Cargar usuarios iniciales al cargar la página
+fetchRandomUsers();
