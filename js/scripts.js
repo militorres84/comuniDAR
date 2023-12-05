@@ -60,7 +60,6 @@ function fetchRandomUsers() {
                     <button class="btn btn-outline-secondary btn-sm border-0 rounded-2 contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal" data-mentor-name="${userName}">Contactar</button>
                     <div>
                         <a href="#main"><i class="bi bi-linkedin"></i></a>
-                        <a href="#main"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
