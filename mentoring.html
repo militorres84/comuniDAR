@@ -12,9 +12,10 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 <!-- Navigation-->
@@ -44,17 +45,51 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="page-heading">
                     <h1>Mentores</h1>
-                    <span class="subheading">Nuestros mentores</span>
+                    <span class="subheading">Contactate directamente con quien querés que sea tu mentor/a</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 <!-- Main Content -->
-<main class="mb-4">
+<main id="main" class="mb-4">
     <div class="container">
         <div id="user-container" class="row gap-3"></div>
-        <button class="btn btn-primary mx-auto mt-3 rounded-4" onclick="fetchMoreUsers()">Mostrar Más</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-2">
+                <div class="modal-header">
+                    <h5 class="modal-title text-secondary text-center" id="contactModalLabel">Contactate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <!-- Formulario de contacto -->
+                    <form id="contactForm">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Nombre y apellido</span>
+                            <input type="text" aria-label="First name" class="form-control">
+                            <input type="text" aria-label="Last name" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Correo electrónico" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">tucorreo@ejemplo.com</span>
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text">Mensaje</span>
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                        <div class="justify-content-center text-center">
+                            <button type="submit" class="btn btn-outline-primary rounded-2 w-100">Enviar</button>
+                        </div>
+                    </form>
+                    <div id="successMessage" class="text-success text-center mt-3" style="display: none;">
+                        ¡El mensaje fue enviado con éxito!
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <!-- Footer-->

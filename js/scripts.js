@@ -27,42 +27,81 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
-//! Consumir API para usuarios random
-let userCount = 8;
 
+//! Mentores
 function fetchRandomUsers() {
-    fetch(`https://randomuser.me/api/?results=${userCount}`)
+    fetch(`/assets/data/mentors.json`)
     .then(response => response.json())
     .then(data => {
-        const users = data.results;
+        const users = data;
         const userContainer = document.getElementById('user-container');
+        userContainer.classList.add('justify-content-center');
         
+        const carouselInner = document.createElement('div');
+        carouselInner.classList.add('carousel-inner');
+
         users.forEach(user => {
-        const userName = `${user.name.first} ${user.name.last}`;
-        const userImage = user.picture.large;
-        const userCity = user.location.city;
+            const userName = user.name;
+            const userCity = user.city;
+            const userPosition = user.position;
+            const userImage = user.img;
 
-        const userCard = document.createElement('div');
-        userCard.classList.add('col-md-6', 'col-lg-3', 'user-card');
-        userCard.innerHTML = `
-        <div class="card rounded-2">
-            <img src="${userImage}" class="card-img-top" alt="${userName} Image">
-            <div class="card-body">
-                <h5 class="card-subtitle">${userName}</h5>
-                <p class="card-text small">Ciudad: ${userCity}</p>
+            const userCard = document.createElement('div');
+            userCard.classList.add('col-md-6', 'col-lg-3', 'user-card');
+            userCard.innerHTML = `
+            <div class="card text-center rounded-3 overflow-hidden">
+                <img src="${userImage}" class="card-img-top" alt="${userName} Image">
+                <h5 class="card-header text-center">${userName}</h5>
+                <div class="card-body">
+                    <h6 class="card-subtitle m-2 text-secondary">🌍 ${userCity}</h6>
+                    <p class="card-text small">${userPosition}</p>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <button class="btn btn-outline-secondary btn-sm border-0 rounded-2 contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal" data-mentor-name="${userName}">Contactar</button>
+                    <div>
+                        <a href="#main"><i class="bi bi-linkedin"></i></a>
+                        <a href="#main"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-        `;
+            `;
 
-        userContainer.appendChild(userCard);
+            userContainer.appendChild(userCard);
+
+            // Agregar evento de clic al botón "Contactar"
+            const contactButton = userCard.querySelector('.contact-btn');
+            contactButton.addEventListener('click', () => {
+                // Obtener el nombre del mentor del atributo data-mentor-name
+                const mentorName = contactButton.getAttribute('data-mentor-name');
+
+                // Actualizar el título del modal con el nombre del mentor
+                const modalTitle = document.getElementById('contactModalLabel');
+                modalTitle.textContent = `Contactate con ${mentorName}`;
+
+                // Limpiar el formulario al abrir el modal (opcional)
+                const contactForm = document.getElementById('contactForm');
+                contactForm.reset();
+
+                // Ocultar el mensaje de envío satisfactorio al abrir el modal
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'none';
+            });
+        });
+
+        // Agregar evento de envío del formulario
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+
+            // Simular el envío del formulario
+            setTimeout(() => {
+            // Mostrar el mensaje de envío satisfactorio
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            }, 1000); // Simulando una demora de 1 segundo
         });
     })
     .catch(error => console.error('Error al obtener usuarios:', error));
-}
-
-function fetchMoreUsers() {
-    userCount += 4;
-    fetchRandomUsers();
 }
 
 // Cargar usuarios iniciales al cargar la página

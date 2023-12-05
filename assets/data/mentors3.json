@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Carmen",
+        "city": "Amsterdam, Países Bajos",
+        "position": "Scrum Master",
+        "img": "assets/img/mentors/carmen.jpg"
+    },
+    {
+        "name": "Fernando",
+        "city": "Moscú, Rusia",
+        "position": "Desarrollador Backend",
+        "img": "assets/img/mentors/fernando.jpg"
+    },
+    {
+        "name": "Natalia",
+        "city": "Sidney, Australia",
+        "position": "Especialista en IA",
+        "img": "assets/img/mentors/natalia.jpg"
+    },
+    {
+        "name": "Diego",
+        "city": "Bogotá, Colombia",
+        "position": "DevOps Engineer",
+        "img": "assets/img/mentors/diego.jpg"
+    }
+]
