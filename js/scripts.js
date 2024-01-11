@@ -1,3 +1,55 @@
+let currentIndex = 0;
+
+function changeItem(index) {
+    currentIndex = index;
+    updateGallery();
+}
+
+function nextItem() {
+    currentIndex = (currentIndex + 1) % 6;
+    updateGallery();
+}
+
+function prevItem() {
+    currentIndex = (currentIndex - 1 + 6) % 6;
+    updateGallery();
+}
+
+function updateGallery() {
+    const items = document.querySelectorAll('.gallery-item');
+    const controls = document.querySelectorAll('.gallery-controls button');
+
+    items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+    });
+
+    controls.forEach((control, index) => {
+        control.classList.toggle('active', index === currentIndex);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*!
 * Start Bootstrap - Clean Blog v6.0.9 (https://startbootstrap.com/theme/clean-blog)
 * Copyright 2013-2023 Start Bootstrap

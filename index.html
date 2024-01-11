@@ -17,6 +17,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/estilos.css">
+        <link href="css/default.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
@@ -53,69 +54,24 @@
             </div>
         </header>
         <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">¿Qué es la mentoría laboral y por qué es importante?</h2>
-                            <h3 class="post-subtitle">Forjando el éxito a través de la mentoría laboral: Una guía fundamental para tu carrera</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posteado por
-                            <a href="#!">Lucía Perez</a>
-                            el 24 de septiembre de 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Construyendo un currículum impresionante: tu pasaporte al mundo laboral</h2>
-                            <h3 class="post-subtitle">Guía paso a paso para crear un currículum que destaque y abra puertas</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posteado por
-                            <a href="#!">Pedro Sánchez</a>
-                            el 8 de julio de 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html"><h2 class="post-title">Los beneficios de ser un mentor</h2>
-                            <h3 class="post-subtitle">Descubrí cómo compartir tu experiencia puede enriquecer tu carrera y la de otros</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posteado por
-                            <a href="#!">Nicolas Olmedo</a>
-                            el 18 de septiembre de 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Habilidades blandas: la clave para el éxito en el trabajo</h2>
-                            <h3 class="post-subtitle">Cómo habilidades como la comunicación, la resolución de problemas y el trabajo en equipo pueden impulsar tu carrera</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posteado por
-                            <a href="#!">Agustina García</a>
-                            el 24 de agosto de 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Página siguiente →</a></div>
-                </div>
-            </div>
-        </div>
+        <main>
+
+                    <header id="header" class="gallery">
+                        <ul class="ubuntu-bg">
+                            <li class="gallery-item active"></li>
+                            <li class="gallery-item"></li>
+                            <li class="gallery-item"></li>
+                        </ul>
+                        <div class="gallery-controls">
+                            <button class="active"></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+                        <button class="icon-prev" title="prev" onclick="prevItem()"></button>
+                        <button class="icon-next" title="next" onclick="nextItem()"></button>
+                    </header>
+        </main>            
+        
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
@@ -155,6 +111,8 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/callback.js"></script>
+
     </body>
 </html>
