@@ -1,0 +1,87 @@
+#contact{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    max-width: 720px;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding: 5rem;
+    box-shadow: -.25rem .25rem .5rem #ccc;
+
+/* Gradiente: tipo(direccion {opcional}, colores) */
+
+    background-image: radial-gradient(
+        #eee,
+        #fff
+    /*background-color: #f7f7f7;
+    
+    ASI ME GUSTA
+
+    
+    */
+
+
+
+    /*
+    ARCOIRIS DE FORMULARIO
+    background-image: radial-gradient(
+        circle at top right,
+        hsl(0, 50%, 50%),
+        hsl(60, 50%, 50%), 
+        EN EL HSL( tono {0-360}, saturacion{0-100%} y brillo{0-100%}
+        hsl(120, 50%, 50%),
+        hsl(180, 50%, 50%),
+        hsl(240, 50%, 50%),
+        hsl(300, 50%, 50%)
+        */
+    );
+
+}
+
+input,
+textarea,
+select{
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+label,
+.validation{
+    max-height: 0;
+    overflow:hidden;
+    /* Shorthand: transition 
+    (property duration timing-function delay)*/
+}
+
+:focus + .validation{
+    max-height: 100px;
+}
+
+/* Validacion Visual */
+    :focus:valid{
+        outline-color: var(--bs-success);
+    }
+
+    :valid + .validation{
+        color: var(--bs-success);
+    }
+
+    :not(:placeholder-shown):focus:invalid{
+        outline-color: var(--bs-red);
+    }
+
+    :not(:placeholder-shown):invalid + .validation{
+        color: var(--danger)
+        ;
+    }
+
+/* Transiciones */
+    input,
+    textarea,
+    button,
+    select,
+    .validation{
+        transition:all .5s ease-out;
+            /* Shorthand: transition 
+        (property duration timing-function delay)*/
+    }
