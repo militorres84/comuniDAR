@@ -4,29 +4,32 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
 */
 window.addEventListener('DOMContentLoaded', () => {
-    let scrollPos = 0;
+    let lastScrollTop = 0;
     const mainNav = document.getElementById('mainNav');
     const headerHeight = mainNav.clientHeight;
+
     window.addEventListener('scroll', function() {
-        const currentTop = document.body.getBoundingClientRect().top * -1;
-        if ( currentTop < scrollPos) {
-            // Scrolling Up
-            if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
-                mainNav.classList.add('is-visible');
-            } else {
-                console.log(123);
-                mainNav.classList.remove('is-visible', 'is-fixed');
-            }
-        } else {
+        const currentScrollTop = window.scrollY;
+
+        if (currentScrollTop > lastScrollTop) {
             // Scrolling Down
-            mainNav.classList.remove(['is-visible']);
-            if (currentTop > headerHeight && !mainNav.classList.contains('is-fixed')) {
+            mainNav.classList.remove('is-visible');
+            if (currentScrollTop > headerHeight && !mainNav.classList.contains('is-fixed')) {
                 mainNav.classList.add('is-fixed');
             }
+        } else {
+            // Scrolling Up
+            mainNav.classList.remove('is-visible', 'is-fixed');
+
+            // Esperar a que termine la transición y luego agregar la clase is-visible
+            mainNav.addEventListener('transitionend', function() {
+                mainNav.classList.add('is-visible');
+            }, { once: true });
         }
-        scrollPos = currentTop;
+
+        lastScrollTop = currentScrollTop;
     });
-})
+});
 
 //! Mentores
 function fetchRandomUsers() {

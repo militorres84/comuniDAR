@@ -24,7 +24,7 @@
   gap: 20px; /* Espacio entre las cartas */
 }
 
-/* Estilo para las cartas */
+/* Estilo para las cartas (Ahora se utilizan las clases disponibles de bootstrap: card, user-card, etc.)*/
 .carta {
   padding: 10px;
   border: 1px solid #ccc;
@@ -185,7 +185,7 @@ hr {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  margin-top: -3rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
   font-family:'Roboto', sans-serif;
   font-weight: 400;
@@ -10710,16 +10710,13 @@ blockquote {
     opacity: 3 !important;
 }
 
-
-
-
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
     color: rgba(255, 255, 255, 0.8);
   }
 }
 @media (min-width: 992px) {
   #mainNav {
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
     /* Force Hardware Acceleration in WebKit */
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
@@ -10728,10 +10725,10 @@ blockquote {
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -83px;
-    transition: transform 0.2s;
-    border-bottom: 1px solid white;
+    top: 0px;
+    transition: background-color 0.2s, transform 0.2s;
     background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid white;
   }
   #mainNav.is-fixed .navbar-brand {
     color: #212529;
@@ -10747,7 +10744,7 @@ blockquote {
   }
   #mainNav.is-visible {
     /* if the user changes the scrolling direction, we show the header */
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
