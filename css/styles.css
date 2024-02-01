@@ -12,106 +12,119 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/* Modal mentores */
+body.modal-open {
+  overflow: hidden;
+  padding-right: 0 !important; /* Ajusta el valor según sea necesario */
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+}
+
+#mentorForm {
+  font-weight: 400 !important;
+}
 
 /* Estilo para las cartas del post2.html */
-.wrap{
-	margin: auto;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
+  .wrap{
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
-.tarjeta-wrap{
-	margin: 10px;
-	-webkit-perspective: 800;
-	perspective: 800;
-}
+  .tarjeta-wrap{
+    margin: 10px;
+    -webkit-perspective: 800;
+    perspective: 800;
+  }
 
-.tarjeta{
-	width: 15rem;
-	height: 10rem;
-  /* background-image: url('../assets/img/degrade-celeste.jpg'); */
-	background: rgb(52, 123, 149);
-  color: #f5f5f5;
-	position: relative;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transition: .7s ease;
-	transition: .7s ease;
-	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
-	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
-  border-radius: 0.5rem;
-}
+  .tarjeta{
+    width: 15rem;
+    height: 10rem;
+    /* background-image: url('../assets/img/degrade-celeste.jpg'); */
+    background: rgb(52, 123, 149);
+    color: #f5f5f5;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: .7s ease;
+    transition: .7s ease;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    border-radius: 0.5rem;
+  }
 
-.adelante, .atras{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
+  .adelante, .atras{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 
-.adelante{
-	width: 100%;
-  padding: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .adelante{
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-.atras{
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+  .atras{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 
-	padding: 1rem;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 
-	text-align: center;
-	color: #2a2a2a;
-	font-family: "Open Sans", sans-serif;
-  font-weight: 500;
-  background: #e7af66;
-  border-radius: 0.5rem;
-}
+    text-align: center;
+    color: #2a2a2a;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    background: #e7af66;
+    border-radius: 0.5rem;
+  }
 
-.tarjeta-wrap:hover .tarjeta{
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
+  .tarjeta-wrap:hover .tarjeta{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
 
-.card{
-	
-	background-size: cover;
-}
+  .card{
+    
+    background-size: cover;
+  }
 
-.card2{
-	background-image: url(http://1.1m.yt/dlxMf3R.jpg);
-	background-size: cover;
-}
+  .card2{
+    background-image: url(http://1.1m.yt/dlxMf3R.jpg);
+    background-size: cover;
+  }
 
-.card3{
-	background-image: url(http://3.1m.yt/EUB_xE.jpg);
-	background-size: cover;
-}
+  .card3{
+    background-image: url(http://3.1m.yt/EUB_xE.jpg);
+    background-size: cover;
+  }
 
  /* Estilo para la grilla */
 .logo{

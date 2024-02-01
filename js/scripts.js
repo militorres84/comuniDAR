@@ -108,11 +108,3 @@ function fetchRandomUsers() {
 
 // Cargar usuarios iniciales al cargar la página
 fetchRandomUsers();
-
-function showCardBody(card) {
-    card.style.transform = "rotateY(180deg)";
-}
-
-function hideCardBody(card) {
-    card.style.transform = "rotateY(0deg)";
-}
