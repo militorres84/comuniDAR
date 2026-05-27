@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Sara",
+        "city": "Córdoba, Argentina",
+        "position": "Desarrolladora Web",
+        "img": "assets/img/mentors/sara.jpg"
+    },
+    {
+        "name": "Marta",
+        "city": "Madrid, España",
+        "position": "Diseñadora Web",
+        "img": "assets/img/mentors/marta.jpg"
+    },
+    {
+        "name": "Juan",
+        "city": "Buenos Aires, Argentina",
+        "position": "Ingeniero Industrial",
+        "img": "assets/img/mentors/juan.jpg"
+    },
+    {
+        "name": "Ana",
+        "city": "Lima, Perú",
+        "position": "Data Scientist",
+        "img": "assets/img/mentors/ana.jpg"
+    },
+    {
+        "name": "Carlos",
+        "city": "Ciudad de México, México",
+        "position": "Desarrollador Full Stack",
+        "img": "assets/img/mentors/carlos.jpg"
+    },
+    {
+        "name": "Laura",
+        "city": "Santiago, Chile",
+        "position": "UI/UX Designer",
+        "img": "assets/img/mentors/laura.jpg"
+    }
+]

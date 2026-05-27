@@ -1,0 +1,38 @@
+[
+    {
+        "name": "María",
+        "city": "Berlín, Alemania",
+        "position": "Analista de Datos",
+        "img": "assets/img/mentors/maria.jpg"
+    },
+    {
+        "name": "Javier",
+        "city": "Buenos Aires, Argentina",
+        "position": "Arquitecto de Sistemas",
+        "img": "assets/img/mentors/javier.jpg"
+    },
+    {
+        "name": "Elena",
+        "city": "París, Francia",
+        "position": "Desarrolladora Frontend",
+        "img": "assets/img/mentors/elena.jpg"
+    },
+    {
+        "name": "Ricardo",
+        "city": "Lisboa, Portugal",
+        "position": "Ingeniero de Redes",
+        "img": "assets/img/mentors/ricardo.jpg"
+    },
+    {
+        "name": "Isabel",
+        "city": "Londres, Reino Unido",
+        "position": "Product Manager",
+        "img": "assets/img/mentors/isabel.jpg"
+    },
+    {
+        "name": "Pedro",
+        "city": "Montevideo, Uruguay",
+        "position": "Analista de Seguridad",
+        "img": "assets/img/mentors/pedro.jpg"
+    }
+]
